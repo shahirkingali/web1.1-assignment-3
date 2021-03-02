@@ -6,8 +6,14 @@ Compliments Results
 
 {% block content %}
 
-<!-- Your HTML code goes here! -->
-
+<p>Hi, {{users_name}}! I hope you had a wonderful day.</p>
+<ul>
+	You are: {% for compliment in compliments %}
+	<li>{{compliment}}</li>
+	{% endfor %}
+</ul>
+{% else %}
+<p>Thanks for stopping by {{users_name}}! Wish you all the best!</p>
 
 
 {% endblock %}
